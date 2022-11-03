@@ -1,0 +1,17 @@
+.calculator {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  width: 80%;
+  margin: 0 auto;
+}
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+    .gender_row {
+      display: flex;
+     margin: 2vmin;
+      gap: 2vmin;
+    }
