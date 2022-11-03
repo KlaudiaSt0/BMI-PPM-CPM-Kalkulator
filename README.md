@@ -1,2 +1,2 @@
-# BMI-PPM-CPM-Kalkulator
+# BMI PPM & CPM Kalkulator
 SCSS &amp; React.js
