@@ -1,9 +1,4 @@
-.calculator {
-  font-family: "Arial", sans-serif;
-  font-weight: bold;
-  width: 80%;
-  margin: 0 auto;
-}
+
   .form {
     display: flex;
     flex-direction: column;
@@ -15,3 +10,17 @@
      margin: 2vmin;
       gap: 2vmin;
     }
+.error {
+  background-color: red;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  color: white;
+
+  span {
+    font-size: 30px;
+  }
+}
