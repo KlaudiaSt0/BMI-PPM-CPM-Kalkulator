@@ -32,7 +32,7 @@ const PPM = () => {
 
     return <div className="container" style={{justifyContent: "space-evenly", alignItems: "center"}}>
         <div>
-            <h1>Kalkulator PPM:</h1>
+            <h1>Kalkulator PPM (wzór Mifflina) :</h1>
             <form className="form" onSubmit={submitHandler}>
                 <div className="gender_row">
                     <label>Kobieta
