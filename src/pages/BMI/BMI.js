@@ -10,48 +10,46 @@ const BMI = () => {
     const [isFemale, setIsFemale] = useState(false);
     const [isMale, setIsMale] = useState(false);
     const [sub, setSub] = useState(false);
-    const [marker, setMarker] = useState(1);
+    const [bmi, setBmi] = useState("");
 
-    const bmiCalculate = (w,h,a,male) => {
-        console.log(male, "male");
+    const bmiCalculate = (w,h) => {
         const height = h / 100;
         const weight = w / (height * height);
-        const bmi = parseFloat(weight.toFixed(2));
-        setMarker(bmi);
+        const bmi = weight.toFixed(2);
+        setBmi(bmi);
     }
 
     const submitHandler = (e) => {
         e.preventDefault();
-        bmiCalculate(weight, height, age, isMale ? isMale : isFemale);
-        console.log(marker);
+        bmiCalculate(weight, height);
+        setSub( () => true);
     }
-
-
 
     return <div className="container" style={{justifyContent: "space-evenly", alignItems: "center"}}>
         <div>
-        <h1>Kalkulator BMI:</h1>
-        <form className="form" onSubmit={submitHandler}>
+            <h1>Kalkulator BMI:</h1>
+            <form className="form" onSubmit={submitHandler}>
             <div className="gender_row">
                 <label>Kobieta
-                <input
-                    type="checkbox"
-                    id="female"
-                    value={isFemale.toString()}
-                    onChange={() => setIsFemale(prev => prev ? false : "female")}
-                />
+                    <input
+                        type="radio"
+                        id="female"
+                        value={isFemale.toString()}
+                        onChange={() => setIsFemale(prev => prev ? false : "female")}
+                    />
                 </label>
                 <label>Mężczyzna
-                <input
-                    type="checkbox"
-                    id="male"
-                    value={isMale.toString()}
-                    onChange={() => setIsMale(prev => prev ? false : "male")}
-                />
+                    <input
+                        type="radio"
+                        id="male"
+                        value={isMale.toString()}
+                        onChange={() => setIsMale(prev => prev ? false : "male")}
+                    />
                 </label>
             </div>
-            <label> Waga:
 
+
+            <label> Waga:
                 <input
                     type="number"
                     name="weight"
@@ -62,7 +60,7 @@ const BMI = () => {
             </label>
             <label> Wzrost:
                 <input
-                    type="bumber"
+                    type="number"
                     name="height"
                     value={height}
                     onChange={e => setHeight(e.target.value)
@@ -81,7 +79,7 @@ const BMI = () => {
         </form>
     </div>
         <div>
-        <Result bmi={marker}/>
+        <Result bmi={bmi} sub={sub} age={age} sex={isMale? isMale : isFemale}/>
     </div>
     </div>
 
