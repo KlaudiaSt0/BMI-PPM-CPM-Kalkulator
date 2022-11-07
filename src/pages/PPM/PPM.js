@@ -3,32 +3,36 @@ import {useState} from "react";
 import Result from "./Result";
 
 
-const BMI = () => {
+const PPM = () => {
     const [weight, setWeight] = useState("");
     const [height, setHeight] = useState("");
     const [age, setAge] = useState("");
     const [isFemale, setIsFemale] = useState(false);
     const [isMale, setIsMale] = useState(false);
     const [sub, setSub] = useState(false);
-    const [bmi, setBmi] = useState("");
+    const [ppm, setPPM] = useState("");
 
-    const bmiCalculate = (w,h,a,male) => {
-        console.log(male, "male");
-        const height = h / 100;
-        const weight = w / (height * height);
-        const bmi = weight.toFixed(2);
-        setBmi(bmi);
+    const ppmCalculate = (w,h,a,male) => {
+
+        const height = 6.25 * h;
+        const weight = 10 * w;
+        const age = a * 5;
+        const sex = male? 5 : -161;
+        console.log(sex, male);
+        const ppm = weight + height - age + sex;
+        setPPM(ppm);
+        console.log(ppm)
     }
 
     const submitHandler = (e) => {
         e.preventDefault();
-        bmiCalculate(weight, height);
+        ppmCalculate(weight, height, age, isMale);
         setSub( () => true);
     }
 
     return <div className="container" style={{justifyContent: "space-evenly", alignItems: "center"}}>
         <div>
-            <h1>Kalkulator BMI:</h1>
+            <h1>Kalkulator PPM:</h1>
             <form className="form" onSubmit={submitHandler}>
                 <div className="gender_row">
                     <label>Kobieta
@@ -79,10 +83,10 @@ const BMI = () => {
             </form>
         </div>
         <div>
-            <Result bmi={bmi} sub={sub} age={age} sex={isMale? isMale : isFemale}/>
+            <Result ppm={ppm} sub={sub}/>
         </div>
     </div>
 
 };
 
-export default BMI;
+export default PPM;
