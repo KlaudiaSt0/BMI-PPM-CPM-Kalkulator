@@ -1,7 +1,7 @@
 
 body {
   margin: 0 auto;
-  min-width: 250px;
+  min-width: 245px;
   background-image: url("./background.jpg");
   background-position: center;
   height: 100%;
@@ -11,15 +11,22 @@ body {
 }
 #root::before {
   content: "";
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   height: 100%;
   width: 100%;
-position: absolute;
+  position: absolute;
   z-index: 0;
 }
 .container {
-  margin: 7vh 12vw;
+  margin: 7vh auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Arial", sans-serif;
 
 }
+
+$color-blue: rgb(102,205,170);
+$color-yellow: rgb(251,215,1);
+$color-purple: rgb(199,21,133);
+$color-green: #9fcb22;
