@@ -89,7 +89,7 @@ const CPM = () => {
                         onChange={e => setActivity(e.target.value)}>
                         <option key={1.2} value={1.2}>osoba leżąca</option>
                         <option key={1.25} value={1.25}>siedzący tryb życia</option>
-                        <option key={1.5} value={1.5}>niska aktywność fizyczna</option>
+                        <option key={1.5} value={1.5}>umiarkowana aktywność fizyczna</option>
                         <option key={1.75} value={1.75}>aktywny tryb życia</option>
                         <option key={2} value={2}>wyczynowe uprawianie sportu</option>
                     </select>
