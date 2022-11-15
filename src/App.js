@@ -1,11 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {
-  HashRouter,
   Route,
   Routes,
-  Link,
-  NavLink,
-  Outlet
 } from 'react-router-dom';
 import Home from "./pages/Home/Home";
 import BMI from "./pages/BMI/BMI";
@@ -16,7 +12,8 @@ import "./scss/main.scss";
 
 const NotFound = () => <h1 style={{margin: "0 auto", color: "crimson"}}>error 404 - page not found</h1>
 
-function App() {
+const App = () => {
+
   return (
       <div>
             <Menu/>

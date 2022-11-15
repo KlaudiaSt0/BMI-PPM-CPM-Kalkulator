@@ -1,15 +1,18 @@
-
+.form_block {
+justify-content: space-evenly;
+  align-items: center;
+}
   .form {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-    .gender_row {
-      display: flex;
-     margin: 2vmin;
-      gap: 2vmin;
-    }
+.gender_row {
+  display: flex;
+  margin: 2vmin;
+  gap: 2vmin;
+}
 .error {
   background-color: red;
   border-radius: 15px;

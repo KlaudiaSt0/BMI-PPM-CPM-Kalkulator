@@ -25,7 +25,7 @@ const BMI = () => {
         setSub( () => true);
     }
 
-    return <div className="container" style={{justifyContent: "space-evenly", alignItems: "center"}}>
+    return <div className={["container", "form_block"].join(" ")}>
         <div>
             <h1>Kalkulator BMI:</h1>
             <form className="form" onSubmit={submitHandler}>
