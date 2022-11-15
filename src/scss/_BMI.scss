@@ -1,17 +1,45 @@
 .form_block {
 justify-content: space-evenly;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3vw;
+  color: $color-yellow;
+  letter-spacing: 1px;
+}
+.header-form {
+margin-bottom: 1vw;
 }
   .form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
   }
 
 .gender_row {
   display: flex;
   margin: 2vmin;
   gap: 2vmin;
+}
+.input {
+  max-width: 200px;
+ border-radius: 10px;
+  margin: 10px 1vw;
+
+  &:hover {
+    border: 3px solid $color-blue;
+  margin: 9px 1vw;
+  }
+}
+.input_radio {
+  &:active {
+    border: 3px solid $color-blue;
+  }
+}
+
+// RESULT
+
+.result {
+  width: 30vw;
 }
 .error {
   background-color: red;

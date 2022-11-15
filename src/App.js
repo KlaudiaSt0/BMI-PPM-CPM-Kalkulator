@@ -10,9 +10,10 @@ import Menu from "./components/Menu/Menu";
 import CPM from "./pages/CPM/CPM";
 import "./scss/main.scss";
 
-const NotFound = () => <h1 style={{margin: "0 auto", color: "crimson"}}>error 404 - page not found</h1>
+const NotFound = () => <h1 className="error_404">error 404 - page not found</h1>
 
 const App = () => {
+
 
   return (
       <div>

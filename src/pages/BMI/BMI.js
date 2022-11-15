@@ -25,13 +25,14 @@ const BMI = () => {
         setSub( () => true);
     }
 
-    return <div className={["container", "form_block"].join(" ")}>
-        <div>
-            <h1>Kalkulator BMI:</h1>
+    return <div className="container">
+        <div className="form_block">
+            <h1 className="header-form">Kalkulator BMI:</h1>
             <form className="form" onSubmit={submitHandler}>
             <div className="gender_row">
                 <label>Kobieta
                     <input
+                        className={["input", "input_radio"].join(" ")}
                         type="radio"
                         id="female"
                         value={isFemale.toString()}
@@ -40,6 +41,7 @@ const BMI = () => {
                 </label>
                 <label>Mężczyzna
                     <input
+                        className={["input", "input_radio"].join(" ")}
                         type="radio"
                         id="male"
                         value={isMale.toString()}
@@ -51,6 +53,7 @@ const BMI = () => {
 
             <label> Waga:
                 <input
+                    className="input"
                     type="number"
                     name="weight"
                     value={weight}
@@ -60,6 +63,7 @@ const BMI = () => {
             </label>
             <label> Wzrost:
                 <input
+                    className="input"
                     type="number"
                     name="height"
                     value={height}
@@ -69,17 +73,18 @@ const BMI = () => {
             </label>
             <label> Wiek:
                 <input
+                    className="input"
                     type="number"
                     name="age"
                     onChange={e => setAge(e.target.value)}
                 />
                 lat
             </label>
-            <button type="submit" >Oblicz</button>
+            <button type="submit"  className="btn-submit">Oblicz</button>
         </form>
     </div>
         <div>
-        <Result bmi={bmi} sub={sub} age={age} sex={isMale? isMale : isFemale}/>
+        <Result bmi={bmi} sub={sub} age={age} sex={isMale? isMale : isFemale} height={height} weight={weight}/>
     </div>
     </div>
 
