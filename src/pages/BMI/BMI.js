@@ -26,27 +26,28 @@ const BMI = () => {
     }
 
     return <div className="container">
-        <div className="form_block">
+        <div className="form_wrapper">
             <h1 className="header-form">Kalkulator BMI:</h1>
             <form className="form" onSubmit={submitHandler}>
             <div className="gender_row">
                 <label>Kobieta
+                    <span>
                     <input
                         className={["input", "input_radio"].join(" ")}
                         type="radio"
                         id="female"
                         value={isFemale.toString()}
                         onChange={() => setIsFemale(prev => prev ? false : "female")}
-                    />
+                    /></span>
                 </label>
                 <label>Mężczyzna
-                    <input
+                    <span><input
                         className={["input", "input_radio"].join(" ")}
                         type="radio"
                         id="male"
                         value={isMale.toString()}
                         onChange={() => setIsMale(prev => prev ? false : "male")}
-                    />
+                    /></span>
                 </label>
             </div>
 
@@ -58,8 +59,7 @@ const BMI = () => {
                     name="weight"
                     value={weight}
                     onChange={e => setWeight(e.target.value)}
-                />
-                kg
+                />kg
             </label>
             <label> Wzrost:
                 <input
@@ -68,8 +68,7 @@ const BMI = () => {
                     name="height"
                     value={height}
                     onChange={e => setHeight(e.target.value)
-                }/>
-                cm
+                }/>cm
             </label>
             <label> Wiek:
                 <input
@@ -77,8 +76,7 @@ const BMI = () => {
                     type="number"
                     name="age"
                     onChange={e => setAge(e.target.value)}
-                />
-                lat
+                />lat
             </label>
             <button type="submit"  className="btn-submit">Oblicz</button>
         </form>

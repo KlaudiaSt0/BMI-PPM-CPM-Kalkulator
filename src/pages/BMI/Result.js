@@ -22,9 +22,7 @@ const Result = ({bmi, sub, age, sex, height, weight}) => {
             return <div className={["error", "result"].join(" ")}>Popraw błędy w formularzu, by uzyskać poprawny wynik.</div>
         }
     }
-
 }
-
 
 export default Result;
 

@@ -33,13 +33,14 @@ const CPM = () => {
         setSub( () => true);
     }
 
-    return <div className="container" style={{justifyContent: "space-evenly", alignItems: "center"}}>
-        <div>
-            <h1>Kalkulator CPM :</h1>
+    return <div className="container">
+        <div className="form_wrapper">
+            <h1 className="header-form">Kalkulator CPM :</h1>
             <form className="form" onSubmit={submitHandler}>
                 <div className="gender_row">
                     <label>Kobieta
                         <input
+                            className={["input", "input_radio"].join(" ")}
                             type="radio"
                             id="female"
                             value={isFemale.toString()}
@@ -48,6 +49,7 @@ const CPM = () => {
                     </label>
                     <label>Mężczyzna
                         <input
+                            className={["input", "input_radio"].join(" ")}
                             type="radio"
                             id="male"
                             value={isMale.toString()}
@@ -58,6 +60,7 @@ const CPM = () => {
                 <label> Waga:
 
                     <input
+                        className="input"
                         type="number"
                         name="weight"
                         value={weight}
@@ -67,6 +70,7 @@ const CPM = () => {
                 </label>
                 <label> Wzrost:
                     <input
+                        className="input"
                         type="number"
                         name="height"
                         value={height}
@@ -76,6 +80,7 @@ const CPM = () => {
                 </label>
                 <label> Wiek:
                     <input
+                        className="input"
                         type="number"
                         name="age"
                         onChange={e => setAge(e.target.value)}
@@ -84,6 +89,7 @@ const CPM = () => {
                 </label>
                 <label> Współczynnik aktywności:
                     <select
+                        className="input"
                         value={activity}
                         name="activity"
                         onChange={e => setActivity(e.target.value)}>
@@ -94,7 +100,7 @@ const CPM = () => {
                         <option key={2} value={2}>wyczynowe uprawianie sportu</option>
                     </select>
                 </label>
-                <button type="submit" >Oblicz</button>
+                <button type="submit" className="btn-submit">Oblicz</button>
             </form>
         </div>
         <div>

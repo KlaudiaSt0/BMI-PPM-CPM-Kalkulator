@@ -30,13 +30,14 @@ const PPM = () => {
         setSub( () => true);
     }
 
-    return <div className="container" style={{justifyContent: "space-evenly", alignItems: "center"}}>
-        <div>
-            <h1>Kalkulator PPM (wzór Mifflina) :</h1>
+    return <div className="container">
+        <div className="form_wrapper">
+            <h1 className="header-form">Kalkulator PPM (wzór Mifflina) :</h1>
             <form className="form" onSubmit={submitHandler}>
                 <div className="gender_row">
                     <label>Kobieta
                         <input
+                            className={["input", "input_radio"].join(" ")}
                             type="radio"
                             id="female"
                             value={isFemale.toString()}
@@ -45,6 +46,7 @@ const PPM = () => {
                     </label>
                     <label>Mężczyzna
                         <input
+                            className={["input", "input_radio"].join(" ")}
                             type="radio"
                             id="male"
                             value={isMale.toString()}
@@ -55,6 +57,7 @@ const PPM = () => {
                 <label> Waga:
 
                     <input
+                        className="input"
                         type="number"
                         name="weight"
                         value={weight}
@@ -64,6 +67,7 @@ const PPM = () => {
                 </label>
                 <label> Wzrost:
                     <input
+                        className="input"
                         type="number"
                         name="height"
                         value={height}
@@ -73,13 +77,14 @@ const PPM = () => {
                 </label>
                 <label> Wiek:
                     <input
+                        className="input"
                         type="number"
                         name="age"
                         onChange={e => setAge(e.target.value)}
                     />
                     lat
                 </label>
-                <button type="submit" >Oblicz</button>
+                <button type="submit" className="btn-submit">Oblicz</button>
             </form>
         </div>
         <div>
