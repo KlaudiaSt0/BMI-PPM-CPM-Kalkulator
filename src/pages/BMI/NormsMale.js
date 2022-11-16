@@ -22,7 +22,7 @@ const NormsMale = ({bmi}) => {
         return <div className={["result", "result-0"].join(" ")}><h2 className="result-header">Twoje BMI: {bmi}</h2>
             <h2 className="result-header"> Norma </h2>
             <p className="result-text">Twoja waga jest prawidłowa! Zadbaj o to, by jedzenie gęste odżywczo stanowiło minimum 80% Twojej diety i
-                ruszaj się co najmniej 3 razy w tygodniu.</p>
+                ruszaj się co najmniej 3 razy w tygodniu, by zachować zdrowie.</p>
         </div>
     } else if (bmi >= 25 && bmi < 30) {
         return <div className={["result", "result-1"].join(" ")}><h2 className="result-header">Twoje BMI: {bmi}</h2>

@@ -88,7 +88,7 @@ const PPM = () => {
             </form>
         </div>
         <div>
-            <Result ppm={ppm} sub={sub}/>
+            <Result ppm={ppm} sub={sub} weight={weight} height={height} age={age} sex={isMale? isMale : isFemale}/>
         </div>
     </div>
 

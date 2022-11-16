@@ -11,7 +11,7 @@ const Result = ({bmi, sub, age, sex, height, weight}) => {
         if ( weight && height && age && sex !== false) {
 
             if (age < 3) {
-                return <h2 className="error"> BMI jest predestynowane dla osób powyżej 3-go roku życia. Do określania
+                return <h2 className={["error", "result"].join(" ")}> BMI jest predestynowane dla osób powyżej 3-go roku życia. Do określania
                     prawidłowości wagi dzieci służą centyle.</h2>
             } else if (age >= 3 && sex === "male") {
                 return <NormsMale bmi={bmi}/>
@@ -19,7 +19,7 @@ const Result = ({bmi, sub, age, sex, height, weight}) => {
                 return <NormsFemale bmi={bmi}/>
             }
         } else {
-            return <div className={["error", "result"].join(" ")}>Popraw błędy w formularzu, by uzyskać poprawny wynik.</div>
+            return <h2 className={["error", "result"].join(" ")}>Popraw błędy w formularzu, by uzyskać poprawny wynik.</h2>
         }
     }
 }

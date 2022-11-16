@@ -31,23 +31,22 @@ const BMI = () => {
             <form className="form" onSubmit={submitHandler}>
             <div className="gender_row">
                 <label>Kobieta
-                    <span>
                     <input
                         className={["input", "input_radio"].join(" ")}
                         type="radio"
                         id="female"
                         value={isFemale.toString()}
                         onChange={() => setIsFemale(prev => prev ? false : "female")}
-                    /></span>
+                    />
                 </label>
                 <label>Mężczyzna
-                    <span><input
+                    <input
                         className={["input", "input_radio"].join(" ")}
                         type="radio"
                         id="male"
                         value={isMale.toString()}
                         onChange={() => setIsMale(prev => prev ? false : "male")}
-                    /></span>
+                    />
                 </label>
             </div>
 
