@@ -87,7 +87,7 @@ const CPM = () => {
                     />
                     lat
                 </label>
-                <label> Współczynnik aktywności:
+                <label className="select"> Współczynnik aktywności:
                     <select
                         className="input"
                         value={activity}
@@ -104,7 +104,7 @@ const CPM = () => {
             </form>
         </div>
         <div>
-            <Result cpm={cpm} sub={sub}/>
+            <Result cpm={cpm} sub={sub} weight={weight} height={height} age={age} sex={isMale? isMale : isFemale}/>
         </div>
     </div>
 

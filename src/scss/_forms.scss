@@ -29,11 +29,21 @@ margin: 0 0 1vw 3vw;
   max-width: 200px;
  border-radius: 10px;
   margin: 10px 1vw;
-
+background-color: white;
+  border: 1px solid black;
   &:hover {
     border: 3px solid $color-blue;
-  margin: 9px 0.94vw;
+  margin: 8px 0.94vw;
   }
+}
+.input_radio:hover {
+  margin: 10px 1vw;
+}
+.select {
+  padding-top: 1vw;
+  display: flex;
+flex-direction: column;
+  align-items: center;
 }
 .btn-submit {
 margin-top: 1vw;
@@ -70,4 +80,5 @@ margin-top: 1vw;
   .input_radio {
     width: auto;
   }
+
 }
