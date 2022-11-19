@@ -39,6 +39,7 @@ const PPM = () => {
                         <input
                             className={["input", "input_radio"].join(" ")}
                             type="radio"
+                            name="sex"
                             id="female"
                             value={isFemale.toString()}
                             onChange={() => setIsFemale(prev => prev ? false : "female")}
@@ -49,6 +50,7 @@ const PPM = () => {
                             className={["input", "input_radio"].join(" ")}
                             type="radio"
                             id="male"
+                            name="sex"
                             value={isMale.toString()}
                             onChange={() => setIsMale(prev => prev ? false : "male")}
                         />
