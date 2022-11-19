@@ -16,8 +16,8 @@ if(random === true) {
 
             <div className="api-container">
                 <h2 className="api-header">{data.strMeal}</h2>
-                <small className="api-text">Category: {data.strCategory}</small>
-                <small className="api-text">Area: {data.strArea}</small>
+                <p> className="api-text">Category: {data.strCategory}</p>
+                <p> className="api-text">Area: {data.strArea}</p>
                 <a className="api-link" href={data.strSource} target="blank">Przejdź do strony przepisu</a>
             </div>
         <img className="image-small" src={data.strMealThumb} alt={data.strMeal}/>
