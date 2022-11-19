@@ -82,13 +82,18 @@ margin-top: 1vw;
     width: 45vw;
     margin: 9px 6px;
     &:hover {
-      width: calc(45vw - 3px);
+
       margin: 7px 4px;
     }
   }
+  .input-height {
+    margin: 9px 0.6vw;
+  }
   .input_radio {
+    margin: 10px 1vw;
     width: auto;
     &:hover {
+      margin: 10px 1vw;
       width: auto;
     }
   }

@@ -64,7 +64,7 @@ const BMI = () => {
             </label>
             <label> Wzrost:
                 <input
-                    className="input"
+                    className={["input", "input-height"].join(" ")}
                     type="number"
                     name="height"
                     value={height}
