@@ -35,6 +35,7 @@ const BMI = () => {
                         className={["input", "input_radio"].join(" ")}
                         type="radio"
                         id="female"
+                        name="sex"
                         value={isFemale.toString()}
                         onChange={() => setIsFemale(prev => prev ? false : "female")}
                     />
@@ -44,6 +45,7 @@ const BMI = () => {
                         className={["input", "input_radio"].join(" ")}
                         type="radio"
                         id="male"
+                        name="sex"
                         value={isMale.toString()}
                         onChange={() => setIsMale(prev => prev ? false : "male")}
                     />

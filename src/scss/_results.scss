@@ -61,7 +61,7 @@
   font-size: 110%;
   background-color: $color-yellow;
 }
-.btn-api {
+.btn-api-CPM {
   margin: 2vw 4vw;
  font-weight: bold;
   letter-spacing: 1px;
@@ -70,19 +70,83 @@
   border-radius: 30px;
   border: 2px solid $color-purple;
 }
-.header-api {
-  width: 30vw;
-  margin-bottom: 2vw;
+.btn-api-PPM {
+  margin: 2vw 4vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-image: linear-gradient(20deg, white 70%, $color-yellow 30%);
+  padding: 5px 10px;
+  border-radius: 30px;
+  border:2px solid lightgrey;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $color-blue;
+
+
+  }
 }
+
 .list {
 line-height: 1.1;
   margin-left: 2vw;
 }
+.article {
+  display: flex;
+  width: 35vw;
+  margin-top: 1vw;
+}
 
+.api-container {
+
+  display: flex;
+  flex-direction: column;
+  width: calc(35vw - 200px);
+  justify-content: space-between;
+  font-family: "Lucida Sans", "Lucida", sans-serif;
+  padding: 0 1vw 0 0;
+}
+.api-header {
+  font-size: 110%;
+}
+
+.image-small {
+  width: 220px;
+  height: auto;
+ border: 1px solid black;
+}
+.api-text {
+
+}
+.api-link {
+  color: black;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 90%;
+  &:hover {
+    color: $color-purple;
+  }
+}
+@media(max-width: 1260px) {
+  .image-small {
+    width: 17.4vw;
+  }
+}
 @media(max-width: 1130px) {
   .result {
     width: 339px;
   }
+  .api-container {
+    width: 339px;
+  }
+}
+@media(max-width: 965px) {
+  .article {
+    width: 339px;
+  }
+.image-small {
+  width: 170px;
+}
+
 }
 @media(max-width: 750px) {
   .result {
@@ -100,6 +164,48 @@ line-height: 1.1;
     box-sizing: border-box;
     width: 87vw;
   }
+  .btn-api {
+    margin-top: 7.8px;
+  }
+  .article {
+    width: 87vw;
+  }
+  .image-small {
+    width: 44vw;
+  }
+  .api-header {
+    font-size: 4.5vw;
+  }
+  .api-text {
+    font-size: 4.1vw;
+  }
 }
+@media (max-width: 355px) {
+  .article {
+    flex-direction: column;
+align-items: center;
+  }
+  .api-container {
+    width: 87vw;
+  }
+  .api-header {
+    font-size: 16px;
+    text-align: center;
+  }
+  .api-text {
+    text-align: center;
+    font-size: 14.5px;
+    margin: 0.5vw 0;
+  }
+  .api-link {
+
+    text-align: center;
+    margin-bottom: 2vw;
+  }
+  .image-small {
+    width: 158px;
+  }
+}
+
 
 

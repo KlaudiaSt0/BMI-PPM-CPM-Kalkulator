@@ -12,8 +12,6 @@ import person from "./person.svg";
 import personRunning from "./person-running.svg";
 
 
-
-
 const Menu = () => {
     return <nav className="nav">
                         <Link to="/" className="home">Kalkulatory BMI, PPM & CPM</Link>
