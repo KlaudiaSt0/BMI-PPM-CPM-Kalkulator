@@ -33,8 +33,8 @@ const CPM = () => {
         setSub( () => true);
     }
 
-    return <div className="container">
-        <div className="form_wrapper">
+    return <main className="container">
+        <section className="form_wrapper">
             <h1 className="header-form">Kalkulator CPM :</h1>
             <form className="form" onSubmit={submitHandler}>
                 <div className="gender_row">
@@ -104,11 +104,11 @@ const CPM = () => {
                 </label>
                 <button type="submit" className="btn-submit">Oblicz</button>
             </form>
-        </div>
-        <div className="api-wrapper">
+        </section>
+        <section className="api-wrapper">
             <Result cpm={cpm} sub={sub} weight={weight} height={height} age={age} sex={isMale? isMale : isFemale}/>
-        </div>
-    </div>
+        </section>
+    </main>
 
 };
 

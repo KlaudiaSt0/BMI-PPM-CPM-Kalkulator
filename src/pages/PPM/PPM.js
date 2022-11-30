@@ -30,8 +30,8 @@ const PPM = () => {
         setSub( () => true);
     }
 
-    return <div className="container">
-        <div className="form_wrapper">
+    return <main className="container">
+        <section className="form_wrapper">
             <h1 className="header-form">Kalkulator PPM (wzór&nbsp;Mifflina):</h1>
             <form className="form" onSubmit={submitHandler}>
                 <div className="gender_row">
@@ -88,11 +88,11 @@ const PPM = () => {
                 </label>
                 <button type="submit" className="btn-submit">Oblicz</button>
             </form>
-        </div>
-        <div>
+        </section>
+        <section>
             <Result ppm={ppm} sub={sub} weight={weight} height={height} age={age} sex={isMale? isMale : isFemale}/>
-        </div>
-    </div>
+        </section>
+    </main>
 
 };
 

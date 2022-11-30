@@ -25,8 +25,8 @@ const BMI = () => {
         setSub( () => true);
     }
 
-    return <div className="container">
-        <div className="form_wrapper">
+    return <main className="container">
+        <section className="form_wrapper">
             <h1 className="header-form">Kalkulator BMI:</h1>
             <form className="form" onSubmit={submitHandler}>
             <div className="gender_row">
@@ -81,11 +81,11 @@ const BMI = () => {
             </label>
             <button type="submit"  className="btn-submit">Oblicz</button>
         </form>
-    </div>
-        <div>
+    </section>
+        <section>
         <Result bmi={bmi} sub={sub} age={age} sex={isMale? isMale : isFemale} height={height} weight={weight}/>
-    </div>
-    </div>
+    </section>
+    </main>
 
 };
 

@@ -17,7 +17,7 @@ const GetInspired = ({insp}) => {
        return <article className="article-CPM">
            <h3 className="header_3">Urozmaicona dieta to podstawa zdrowia!<br/> Kiedy ostatnio w Twojej diecie znalazły się:</h3>
             <div className="links-container">
-                {data.map(el => <a href={el.recipe.url} target="blank" className="api-links" key={el.recipe.url}> <span className="api-span">{el.recipe.label}</span><img src={el.recipe.image} alt="a picture of this dish" className="picOnHover"/>&nbsp;- cuisine&nbsp;type: {el.recipe.cuisineType}, kcal: {(el.recipe.calories).toFixed(2)}&nbsp;kcal</a>)}
+                {data.map(el => <a href={el.recipe.url} target="blank" className="api-links" key={el.recipe.url}> <span className="api-span">{el.recipe.label}</span><img src={el.recipe.image} alt={el.recipe.label} className="picOnHover"/>&nbsp;- cuisine&nbsp;type: {el.recipe.cuisineType}, kcal: {(el.recipe.calories).toFixed(2)}&nbsp;kcal</a>)}
             </div>
        </article>
     } else {
